@@ -31,6 +31,10 @@ class MyForm(QDialog):
         self.ui.sum.setText(str(self.calories_sum))
         self.ui.foodList.addItem(food)
 
+        if self.calories_sum > 1000:
+            self.ui.sum.setStyleSheet("color: red;")
+        else:
+            self.ui.sum.setStyleSheet("color: black;")
 
     def men(self):
         if self.ui.men.isChecked():
